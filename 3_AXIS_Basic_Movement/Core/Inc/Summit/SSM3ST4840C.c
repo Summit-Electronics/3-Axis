@@ -736,12 +736,12 @@ int32_t ENC_Get_Position(int Axis)
 
 	if(Axis == 2)
 	{
-		Fenc_Pos = Fenc_Pos * ENC_Factor_A1;
+		Fenc_Pos = Fenc_Pos * ENC_Factor_A2;
 	}
 
 	if(Axis == 3)
 	{
-		Fenc_Pos = Fenc_Pos * ENC_Factor_A1;
+		Fenc_Pos = Fenc_Pos * ENC_Factor_A3;
 	}
 
 	Enc_Position = (int32_t)Fenc_Pos;

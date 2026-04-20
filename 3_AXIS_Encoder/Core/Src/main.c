@@ -202,15 +202,15 @@ int main(void)
   Current_axis_1.IHOLD 	= 1;
   Current_axis_1.IRUN 	= 3;
 
-  TMC5160_Basic_Init(&Current_axis_1,1); //init Axis 1
+  TMC5160_Basic_Init(&Current_axis_1,3); //init Axis 1
 
-  TMC5160_Set_Home(1);
-  ENC_Start_position(1); //set ENC 1 to position 0
+  TMC5160_Set_Home(3);
+  ENC_Start_position(3); //set ENC 1 to position 0
 
-  TMC5160_Drive_Enable(1, 1);
-  TMC5160_Rotate_To(51200, &Ramp_axis_1,1);
-  TMC5160_Rotate_To(-51200, &Ramp_axis_1,1);
-  TMC5160_Rotate_To(0, &Ramp_axis_1,1);
+  TMC5160_Drive_Enable(1, 3);
+  TMC5160_Rotate_To(51200, &Ramp_axis_1,3);
+  TMC5160_Rotate_To(-51200, &Ramp_axis_1,3);
+  TMC5160_Rotate_To(0, &Ramp_axis_1,3);
   /* USER CODE END 2 */
 
   /* Infinite loop */

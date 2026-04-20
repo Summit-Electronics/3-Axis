@@ -75,6 +75,7 @@ void TMC5160_Basic_Init(CurrentConfig *Current, int Axis)
 
 	uint32_t IHOLD_IRUN = 0x00070000; // standard IHOLD DELAY value
 
+
 	if(Current->IHOLD > 23) // set upper current limit ~3.0A
 	{
 		Current->IHOLD = 23;
@@ -735,12 +736,12 @@ int32_t ENC_Get_Position(int Axis)
 
 	if(Axis == 2)
 	{
-		Fenc_Pos = Fenc_Pos * ENC_Factor_A1;
+		Fenc_Pos = Fenc_Pos * ENC_Factor_A2;
 	}
 
 	if(Axis == 3)
 	{
-		Fenc_Pos = Fenc_Pos * ENC_Factor_A1;
+		Fenc_Pos = Fenc_Pos * ENC_Factor_A3;
 	}
 
 	Enc_Position = (int32_t)Fenc_Pos;
@@ -829,7 +830,5 @@ uint16_t Read_AIN(void)
 
 	return ADCReading;
 }
-
-
 
 
